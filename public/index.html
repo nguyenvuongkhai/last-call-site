@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Last Call: caffeine cutoff coach</title>
+<meta name="description" content="See exactly when your last coffee should be.">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta property="og:title" content="Last Call: caffeine cutoff coach">
+<meta property="og:description" content="See exactly when your last coffee should be.">
+<meta property="og:image" content="https://last-call-site.pages.dev/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#12101C;font-family:-apple-system,'SF Pro Text',system-ui,sans-serif}
+a{color:#F5A524;text-decoration:none}a:hover{color:#FFC85C;text-decoration:underline}
+@container (max-width:639px){.nav-links{display:none !important}}
+.nav-links{display:flex;align-items:center;gap:28px}
+.ios-device{width:402px;height:874px;border-radius:48px;overflow:hidden;position:relative;background:#12101C;font-family:-apple-system,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.ios-island{position:absolute;top:11px;left:50%;transform:translateX(-50%);width:126px;height:37px;border-radius:24px;background:#000;z-index:50}
+.ios-status{position:absolute;top:0;left:0;right:0;z-index:10;display:flex;gap:154px;align-items:center;justify-content:center;padding:21px 24px 19px;box-sizing:border-box}
+.ios-status-side{flex:1;height:22px;display:flex;align-items:center;justify-content:center}
+.ios-time{font-weight:590;font-size:17px;line-height:22px;color:#fff}
+.ios-content{height:100%;overflow:hidden}
+.ios-home{position:absolute;bottom:0;left:0;right:0;z-index:60;height:34px;display:flex;justify-content:center;align-items:flex-end;padding-bottom:8px;box-sizing:border-box;pointer-events:none}
+.ios-home div{width:139px;height:5px;border-radius:100px;background:rgba(255,255,255,0.7)}
+.fx1:hover{background:#FFC85C !important}
+.fx2:hover{background:#FFC85C !important}
+.fx2:active{transform:scale(0.98) !important}
+.fx3:hover{background:#FFC85C !important}
+.fx3:active{transform:scale(0.98) !important}
+.fx4:hover{background:#FFC85C !important}
+.fx4:active{transform:scale(0.98) !important}
+</style>
+<script src="/js/config.js" defer></script>
+<script src="/js/site.js" defer></script>
+</head>
+<body>
+<div style="min-height:100vh;background:#12101C;color:#F3E6CD;display:flex;flex-direction:column;align-items:center;container-type:inline-size;overflow-x:hidden">
+
+  <!-- Nav -->
+  <div style="width:100%;max-width:1160px;box-sizing:border-box;display:flex;align-items:center;gap:20px;padding:22px clamp(20px,5cqw,32px)">
+    <div style="display:flex;align-items:center;gap:11px">
+      <div style="width:34px;height:34px;border-radius:10px;background:#F5A524;display:flex;align-items:center;justify-content:center">
+        <svg width="20" height="20" viewBox="0 0 32 32" fill="none"><path d="M4 24 C4 12 12 6 15 5" stroke="#12101C" stroke-width="2.8" stroke-linecap="round"></path><line x1="4" x2="28" y1="20" y2="20" stroke="#12101C" stroke-width="1.7" stroke-dasharray="2.5 3"></line><circle cx="15" cy="5" r="3" fill="#12101C"></circle><circle cx="22" cy="20" r="3" fill="#12101C"></circle></svg>
+      </div>
+      <span style="font-family:'Nunito',ui-rounded,sans-serif;font-weight:800;font-size:19px;color:#F3E6CD">Last Call</span>
+    </div>
+    <div style="margin-left:auto;display:flex;align-items:center;gap:28px">
+      <div class="nav-links">
+      <a href="#how" style="font-size:14px;font-weight:600;color:#8F8AA8">How it works</a>
+      <a href="#pricing" style="font-size:14px;font-weight:600;color:#8F8AA8">Pricing</a>
+      </div>
+      <a class="fx1" href="#app-store" data-store-link style="display:block;background:#F5A524;border-radius:12px;padding:10px 18px;text-decoration:none">
+        <span style="font-size:14px;font-weight:700;color:#12101C">Get the app</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <div style="width:100%;max-width:1160px;box-sizing:border-box;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:48px;align-items:center;padding:clamp(24px,6cqw,56px) clamp(20px,5cqw,32px) clamp(56px,9cqw,80px)">
+    <div style="display:flex;flex-direction:column;gap:26px">
+      <div style="display:flex;align-items:center;gap:8px;background:rgba(127,224,179,0.09);border:1px solid rgba(127,224,179,0.3);border-radius:999px;padding:8px 14px;align-self:flex-start">
+        <span style="width:7px;height:7px;border-radius:99px;background:#7FE0B3"></span>
+        <span style="font-size:12.5px;font-weight:600;color:#7FE0B3">The caffeine cutoff coach for iPhone</span>
+      </div>
+      <div style="font-family:'Nunito',ui-rounded,sans-serif;font-weight:900;font-size:clamp(38px,8cqw,58px);line-height:1.08;letter-spacing:-0.5px;color:#F3E6CD;text-wrap:balance">See exactly when your last coffee should be.</div>
+      <div style="font-size:18px;line-height:1.6;color:#8F8AA8;max-width:460px;text-wrap:pretty">Caffeine has a half-life. Last Call turns it into one simple time — your last call. Stop there, and you sleep like it.</div>
+      <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+        <a class="fx2" href="#app-store" data-store-link style="display:flex;align-items:center;gap:10px;background:#F5A524;border-radius:14px;padding:15px 24px;text-decoration:none">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M16.5 12.8c0-2.9 2.4-4.3 2.5-4.4-1.4-2-3.5-2.2-4.2-2.3-1.8-.2-3.5 1.1-4.4 1.1-.9 0-2.3-1-3.8-1-2 0-3.8 1.1-4.8 2.9-2 3.5-.5 8.7 1.5 11.5 1 1.4 2.1 2.9 3.6 2.9 1.4-.1 2-.9 3.7-.9s2.2.9 3.8.9c1.6 0 2.6-1.4 3.5-2.8 1.1-1.6 1.6-3.2 1.6-3.3-.1 0-3-.1-3-4.6zM13.7 4.2c.8-.9 1.3-2.2 1.2-3.5-1.1 0-2.5.8-3.3 1.7-.7.8-1.4 2.1-1.2 3.4 1.2.1 2.5-.7 3.3-1.6z" fill="#12101C"></path></svg>
+          <span style="font-size:16px;font-weight:700;color:#12101C">Download on the App Store</span>
+        </a>
+        <span style="font-size:13px;color:#8F8AA8">Free to log · Pro from $2.50/mo</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;padding-top:6px">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8.5 8.5 0 119.5 4a7 7 0 0010.5 10.5z" stroke="#7FE0B3" stroke-width="1.8" stroke-linejoin="round"></path></svg>
+        <span style="font-size:13.5px;color:#8F8AA8"><span style="color:#7FE0B3;font-weight:700">Your data stays on your iPhone.</span> No account, no sign-up.</span>
+      </div>
+    </div>
+
+    <!-- Phone mock -->
+    <div style="display:flex;justify-content:center">
+      <div style="width:302px;height:656px;overflow:hidden;border-radius:44px;box-shadow:0 40px 90px rgba(0,0,0,0.55),0 0 0 1px #2B2545">
+        <div style="width:402px;transform:scale(0.7513);transform-origin:top left">
+          <div class="ios-device" aria-hidden="true"><div class="ios-island"></div><div class="ios-status"><div class="ios-status-side"><span class="ios-time">3:12</span></div><div class="ios-status-side" style="gap:7px"><svg width="19" height="12" viewBox="0 0 19 12"><rect x="0" y="7.5" width="3.2" height="4.5" rx="0.7" fill="#fff"/><rect x="4.8" y="5" width="3.2" height="7" rx="0.7" fill="#fff"/><rect x="9.6" y="2.5" width="3.2" height="9.5" rx="0.7" fill="#fff"/><rect x="14.4" y="0" width="3.2" height="12" rx="0.7" fill="#fff"/></svg><svg width="17" height="12" viewBox="0 0 17 12"><path d="M8.5 3.2C10.8 3.2 12.9 4.1 14.4 5.6L15.5 4.5C13.7 2.7 11.2 1.5 8.5 1.5C5.8 1.5 3.3 2.7 1.5 4.5L2.6 5.6C4.1 4.1 6.2 3.2 8.5 3.2Z" fill="#fff"/><path d="M8.5 6.8C9.9 6.8 11.1 7.3 12 8.2L13.1 7.1C11.8 5.9 10.2 5.1 8.5 5.1C6.8 5.1 5.2 5.9 3.9 7.1L5 8.2C5.9 7.3 7.1 6.8 8.5 6.8Z" fill="#fff"/><circle cx="8.5" cy="10.5" r="1.5" fill="#fff"/></svg><svg width="27" height="13" viewBox="0 0 27 13"><rect x="0.5" y="0.5" width="23" height="12" rx="3.5" stroke="#fff" stroke-opacity="0.35" fill="none"/><rect x="2" y="2" width="20" height="9" rx="2" fill="#fff"/><path d="M25 4.5V8.5C25.8 8.2 26.5 7.2 26.5 6.5C26.5 5.8 25.8 4.8 25 4.5Z" fill="#fff" fill-opacity="0.4"/></svg></div></div><div class="ios-content">
+          <div data-screen-label="Site hero phone" style="min-height:874px;box-sizing:border-box;display:flex;flex-direction:column;gap:16px;padding:72px 20px 40px;background:#12101C">
+            <div style="display:flex;align-items:flex-end;justify-content:space-between">
+              <div style="display:flex;flex-direction:column;gap:4px">
+                <div style="font-size:11px;letter-spacing:1.6px;font-weight:600;color:#8F8AA8">TUESDAY, JULY 8</div>
+                <div style="font-family:'Nunito',ui-rounded,sans-serif;font-weight:800;font-size:30px;line-height:1.1;color:#F3E6CD">Last Call</div>
+              </div>
+              <div style="display:flex;align-items:center;gap:7px;background:rgba(127,224,179,0.09);border:1px solid rgba(127,224,179,0.3);border-radius:999px;padding:8px 13px">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8.5 8.5 0 119.5 4a7 7 0 0010.5 10.5z" stroke="#7FE0B3" stroke-width="1.8" stroke-linejoin="round"></path></svg>
+                <span style="font-size:12.5px;font-weight:600;color:#7FE0B3">6 clean nights</span>
+              </div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+              <div style="background:#1D1930;border:1px solid #2B2545;border-radius:20px;padding:16px 17px;display:flex;flex-direction:column;gap:6px">
+                <div style="font-size:10.5px;letter-spacing:1.4px;font-weight:600;color:#8F8AA8">IN YOUR SYSTEM</div>
+                <div style="display:flex;align-items:baseline;gap:5px"><span style="font-family:'Nunito',ui-rounded,sans-serif;font-weight:800;font-size:40px;line-height:1;color:#F5A524">66</span><span style="font-size:14px;font-weight:600;color:#8F8AA8">mg</span></div>
+                <div style="font-size:11.5px;color:#8F8AA8">peaked 99 mg at noon</div>
+              </div>
+              <div style="background:#1D1930;border:1px solid #2B2545;border-radius:20px;padding:16px 17px;display:flex;flex-direction:column;gap:6px">
+                <div style="font-size:10.5px;letter-spacing:1.4px;font-weight:600;color:#8F8AA8">LAST CALL</div>
+                <div style="display:flex;align-items:baseline;gap:5px"><span style="font-family:'Nunito',ui-rounded,sans-serif;font-weight:800;font-size:40px;line-height:1;color:#7FE0B3">3:46</span><span style="font-size:14px;font-weight:600;color:#8F8AA8">PM</span></div>
+                <div style="font-size:11.5px;color:#8F8AA8">for one espresso · 63 mg</div>
+              </div>
+            </div>
+            <div style="background:#1D1930;border:1px solid #2B2545;border-radius:20px;padding:16px 14px 10px">
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:0 4px 12px">
+                <span style="font-size:10.5px;letter-spacing:1.4px;font-weight:600;color:#8F8AA8">TODAY'S CURVE</span>
+                <span style="font-size:11px;color:#8F8AA8">half-life 5.5 h</span>
+              </div>
+              <div style="position:relative"><svg viewBox="0 0 358 178" width="100%" style="display:block;overflow:visible">
+      <defs>
+        <linearGradient id="skyhs" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#F5A524" stop-opacity="0.2"></stop><stop offset="0.5" stop-color="#B0679E" stop-opacity="0.14"></stop><stop offset="1" stop-color="#3B3A8E" stop-opacity="0.42"></stop></linearGradient>
+        <linearGradient id="hillhs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFB547"></stop><stop offset="1" stop-color="#E0708A" stop-opacity="0.55"></stop></linearGradient>
+        <linearGradient id="waterhs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7FE0B3" stop-opacity="0.3"></stop><stop offset="1" stop-color="#7FE0B3" stop-opacity="0.08"></stop></linearGradient>
+        <clipPath id="cliphs"><rect x="0" y="0" width="358" height="160" rx="18"></rect></clipPath>
+      </defs>
+      <g clip-path="url(#cliphs)">
+        <rect x="0" y="0" width="358" height="160" fill="url(#skyhs)"></rect>
+        <rect x="30" y="22" width="46" height="14" rx="7" fill="#FFFFFF" opacity="0.06"></rect><rect x="44" y="15" width="22" height="14" rx="7" fill="#FFFFFF" opacity="0.06"></rect>
+        <path d="M348 12a8 8 0 11-9.8 9.8 8 8 0 009.8-9.8z" fill="#CBD5FF" opacity="0.9"></path>
+        <path d="M318 20l1.2 2.8 2.8 1.2-2.8 1.2-1.2 2.8-1.2-2.8-2.8-1.2 2.8-1.2z" fill="#CBD5FF" opacity="0.7"></path><circle cx="330" cy="46" r="1.2" fill="#CBD5FF" opacity="0.6"></circle>
+        <g transform="translate(0 116.3)"><path d="M0 0 q11 -4 22 0 t22 0 t22 0 t22 0 t22 0 t22 0 t22 0 t22 0 t22 0 t22 0 t22 0 t22 0 t22 0 t22 0 t22 0 t22 0 t22 0 L374 60 L0 60 Z" fill="url(#waterhs)"></path></g>
+        <path d="M0 160 C9.9 160 19.9 160 29.8 160 C31.5 160 33.1 104.9 34.8 104.9 C36.5 104.9 38.1 107.4 39.8 108.2 C46.4 111.4 53.1 112.4 59.7 114.3 C66.3 116.2 73 118 79.6 119.7 C86.2 121.4 92.8 123 99.4 124.5 C106 126 112.7 128.7 119.3 128.7 C121 128.7 122.6 73.6 124.3 73.6 C129.3 73.6 134.2 81 139.2 83.8 C145.8 87.6 152.5 90 159.1 92.8 C165.7 95.6 172.4 98.3 179 100.8 C185.6 103.3 192.3 105.6 198.9 107.8 C205.5 110 212.2 112.1 218.8 114 C225.4 115.9 232.1 117.7 238.7 119.4 C245.3 121.1 251.9 122.7 258.5 124.2 C265.1 125.7 271.8 127.1 278.4 128.4 C285 129.7 291.7 131 298.3 132.2 C304.9 133.4 311.6 134.5 318.2 135.5 C324.8 136.5 331.5 137.5 338.1 138.4 C344.7 139.3 351.4 140.1 358 140.9 L358 160 L0 160 Z" fill="url(#hillhs)"></path>
+        <path d="M0 160 C9.9 160 19.9 160 29.8 160 C31.5 160 33.1 104.9 34.8 104.9 C36.5 104.9 38.1 107.4 39.8 108.2 C46.4 111.4 53.1 112.4 59.7 114.3 C66.3 116.2 73 118 79.6 119.7 C86.2 121.4 92.8 123 99.4 124.5 C106 126 112.7 128.7 119.3 128.7 C121 128.7 122.6 73.6 124.3 73.6 C129.3 73.6 134.2 81 139.2 83.8 C145.8 87.6 152.5 90 159.1 92.8 C165.7 95.6 172.4 98.3 179 100.8 C185.6 103.3 192.3 105.6 198.9 107.8 C205.5 110 212.2 112.1 218.8 114 C225.4 115.9 232.1 117.7 238.7 119.4 C245.3 121.1 251.9 122.7 258.5 124.2 C265.1 125.7 271.8 127.1 278.4 128.4 C285 129.7 291.7 131 298.3 132.2 C304.9 133.4 311.6 134.5 318.2 135.5 C324.8 136.5 331.5 137.5 338.1 138.4 C344.7 139.3 351.4 140.1 358 140.9" fill="none" stroke="#FFE3A8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+        <rect x="183" y="0" width="175.0" height="160" fill="#1D1930" opacity="0.42"></rect>
+        <g transform="translate(29.8,104.9)"><circle r="9" fill="#F3E6CD" stroke="#1D1930" stroke-width="2"></circle><g transform="translate(-5.4,-5.4) scale(0.45)"><path d="M6 8h9v3.5a4.5 4.5 0 01-4.5 4.5h0A4.5 4.5 0 016 11.5V8z M15 9h1.5a2 2 0 110 4H15 M4 19.5h14" fill="none" stroke="#12101C" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"></path></g></g><g transform="translate(119.3,73.6)"><circle r="9" fill="#F3E6CD" stroke="#1D1930" stroke-width="2"></circle><g transform="translate(-5.4,-5.4) scale(0.45)"><path d="M8 4h8l-1 16H9L8 4z M8.5 9h7" fill="none" stroke="#12101C" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"></path></g></g>
+        <g transform="translate(0 116.3)"><rect x="196" y="12" width="111" height="15" rx="7.5" fill="#12101C" opacity="0.85"></rect><text x="251.5" y="22.5" font-size="8.5" letter-spacing="0.8" fill="#7FE0B3" text-anchor="middle" font-family="Nunito,sans-serif" font-weight="800">SLEEP-SAFE · 50 MG</text></g>
+      </g>
+      <circle cx="183" cy="100.2" r="23" fill="#F5A524" opacity="0.16"></circle>
+      <rect x="158.0" y="54.2" width="50" height="20" rx="10" fill="#F3E6CD"></rect><path d="M178.0 73.7 L183.0 78.2 L188.0 73.7 Z" fill="#F3E6CD"></path>
+      <text x="183.0" y="68.2" font-size="11" fill="#12101C" text-anchor="middle" font-family="Nunito,sans-serif" font-weight="900">66 mg</text>
+      
+      <text x="39.8" y="173" font-size="9" fill="#8F8AA8" text-anchor="middle" font-family="-apple-system,sans-serif">8 AM</text>
+      <text x="119.3" y="173" font-size="9" fill="#8F8AA8" text-anchor="middle" font-family="-apple-system,sans-serif">12 PM</text>
+      <text x="198.9" y="173" font-size="9" fill="#8F8AA8" text-anchor="middle" font-family="-apple-system,sans-serif">4 PM</text>
+      <text x="278.4" y="173" font-size="9" fill="#8F8AA8" text-anchor="middle" font-family="-apple-system,sans-serif">8 PM</text>
+      <text x="338" y="173" font-size="9" fill="#9BA3E8" text-anchor="middle" font-family="-apple-system,sans-serif" font-weight="600">BED</text>
+    </svg>
+<img src="/assets/mascot/prop-fish.png" alt="" style="position:absolute;height:auto;display:block;image-rendering:pixelated;left:59.78%;top:57.47%;width:7.26%">
+<img src="/assets/mascot/prop-eyes-lid.png" alt="" style="position:absolute;height:auto;display:block;image-rendering:pixelated;left:91.62%;top:73.03%;width:7.26%">
+<img src="/assets/mascot/head-idle.png" alt="" style="position:absolute;height:auto;display:block;image-rendering:pixelated;left:45.25%;top:46.74%;width:11.73%">
+</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;background:rgba(127,224,179,0.08);border:1px solid rgba(127,224,179,0.3);border-radius:14px;padding:12px 14px">
+              <span style="width:8px;height:8px;border-radius:99px;background:#7FE0B3;flex:none"></span>
+              <span style="font-size:13px;line-height:1.45;color:#F3E6CD">You'll dip below 50 mg around 9:04 PM — clear for a clean night.</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:10px;margin-top:2px">
+              <div style="font-size:10.5px;letter-spacing:1.4px;font-weight:600;color:#8F8AA8">QUICK LOG</div>
+              <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
+                <div style="background:#1D1930;border:1px solid #2B2545;border-radius:16px;padding:13px 8px;display:flex;flex-direction:column;align-items:center;gap:7px">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M6 8h9v3.5a4.5 4.5 0 01-4.5 4.5h0A4.5 4.5 0 016 11.5V8z M15 9h1.5a2 2 0 110 4H15 M4 19.5h14" stroke="#F5A524" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  <span style="font-size:12px;font-weight:600;color:#F3E6CD">Espresso</span>
+                  <span style="font-size:10.5px;color:#8F8AA8">63 mg</span>
+                </div>
+                <div style="background:#1D1930;border:1px solid #2B2545;border-radius:16px;padding:13px 8px;display:flex;flex-direction:column;align-items:center;gap:7px">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 8h10v7.5A3.5 3.5 0 0111.5 19h-3A3.5 3.5 0 015 15.5V8z M15 9.5h1.5a2.5 2.5 0 010 5H15 M8.5 5c0-1 .8-1.2.8-2.2 M12 5c0-1 .8-1.2.8-2.2" stroke="#F5A524" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  <span style="font-size:12px;font-weight:600;color:#F3E6CD">Drip 8 oz</span>
+                  <span style="font-size:10.5px;color:#8F8AA8">95 mg</span>
+                </div>
+                <div style="background:#1D1930;border:1px solid #2B2545;border-radius:16px;padding:13px 8px;display:flex;flex-direction:column;align-items:center;gap:7px">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M7 3.5h10L15.7 20.5H8.3L7 3.5z M7.6 8.5h8.8 M10.7 12h2.8v2.8h-2.8z M13.5 3.5L16 1.2" stroke="#F5A524" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  <span style="font-size:12px;font-weight:600;color:#F3E6CD">Cold brew</span>
+                  <span style="font-size:10.5px;color:#8F8AA8">155 mg</span>
+                </div>
+                <div style="border:1.5px dashed #2B2545;border-radius:16px;padding:13px 8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="#8F8AA8" stroke-width="1.8" stroke-linecap="round"></path></svg>
+                  <span style="font-size:12px;font-weight:600;color:#8F8AA8">More</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div><div class="ios-home"><div></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- How it works -->
+  <div id="how" style="width:100%;background:#0E0C16;border-top:1px solid #2B2545;border-bottom:1px solid #2B2545;display:flex;justify-content:center">
+    <div style="width:100%;max-width:1160px;box-sizing:border-box;display:flex;flex-direction:column;gap:40px;padding:clamp(56px,10cqw,80px) clamp(20px,5cqw,32px)">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:32px;flex-wrap:wrap">
+      <div style="display:flex;flex-direction:column;gap:12px;max-width:560px">
+        <div style="font-size:11.5px;letter-spacing:1.8px;font-weight:700;color:#F5A524">HOW IT WORKS</div>
+        <div style="font-family:'Nunito',ui-rounded,sans-serif;font-weight:800;font-size:clamp(26px,5.5cqw,34px);line-height:1.2;color:#F3E6CD">Caffeine sets like the sun.</div>
+        <div style="font-size:15.5px;line-height:1.6;color:#8F8AA8;text-wrap:pretty">Every cup decays on a curve — half of it is still in you 5.5 hours later. Last Call plots the curve against your bedtime and finds the one moment that matters.</div>
+      </div>
+      <img src="/assets/mascot/pose-walk.png" alt="Last Call cat chasing a crab" style="width:170px;height:auto;display:block;image-rendering:pixelated">
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:20px">
+        <div style="background:#1D1930;border:1px solid #2B2545;border-radius:20px;padding:26px 24px;display:flex;flex-direction:column;gap:14px">
+          <div style="width:44px;height:44px;border-radius:13px;background:rgba(245,165,36,0.1);border:1px solid rgba(245,165,36,0.3);display:flex;align-items:center;justify-content:center">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6 8h9v3.5a4.5 4.5 0 01-4.5 4.5h0A4.5 4.5 0 016 11.5V8z M15 9h1.5a2 2 0 110 4H15 M4 19.5h14" stroke="#F5A524" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <span style="font-family:'Nunito',ui-rounded,sans-serif;font-weight:800;font-size:18px;color:#F3E6CD">Log in two taps</span>
+            <span style="font-size:14px;line-height:1.6;color:#8F8AA8">10 built-in drinks with real caffeine numbers. Favorites live on the home screen.</span>
+          </div>
+        </div>
+        <div style="background:#1D1930;border:1px solid #2B2545;border-radius:20px;padding:26px 24px;display:flex;flex-direction:column;gap:14px">
+          <div style="width:44px;height:44px;border-radius:13px;background:rgba(245,165,36,0.1);border:1px solid rgba(245,165,36,0.3);display:flex;align-items:center;justify-content:center">
+            <svg width="22" height="22" viewBox="0 0 32 32" fill="none"><path d="M4 24 C4 12 12 6 15 5" stroke="#F5A524" stroke-width="2.6" stroke-linecap="round"></path><line x1="4" x2="28" y1="20" y2="20" stroke="#7FE0B3" stroke-width="1.6" stroke-dasharray="2.5 3"></line><circle cx="15" cy="5" r="3" fill="#F5A524"></circle><circle cx="22" cy="20" r="3" fill="#7FE0B3"></circle></svg>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <span style="font-family:'Nunito',ui-rounded,sans-serif;font-weight:800;font-size:18px;color:#F3E6CD">Get your last call</span>
+            <span style="font-size:14px;line-height:1.6;color:#8F8AA8">Real decay math counts back from your bedtime to the latest minute a coffee still clears in time.</span>
+          </div>
+        </div>
+        <div style="background:#1D1930;border:1px solid #2B2545;border-radius:20px;padding:26px 24px;display:flex;flex-direction:column;gap:14px">
+          <div style="width:44px;height:44px;border-radius:13px;background:rgba(127,224,179,0.09);border:1px solid rgba(127,224,179,0.3);display:flex;align-items:center;justify-content:center">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M20 14.5A8.5 8.5 0 119.5 4a7 7 0 0010.5 10.5z" stroke="#7FE0B3" stroke-width="1.8" stroke-linejoin="round"></path></svg>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:7px">
+            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap"><span style="font-family:'Nunito',ui-rounded,sans-serif;font-weight:800;font-size:18px;color:#F3E6CD">Sleep like it</span><span style="font-size:9.5px;font-weight:700;letter-spacing:1px;color:#C79AD8;background:rgba(138,78,158,0.2);border:1px solid rgba(199,154,216,0.35);border-radius:6px;padding:3px 7px;flex:none">COMING SOON</span></div>
+            <span style="font-size:14px;line-height:1.6;color:#8F8AA8">One nudge 30 minutes before cutoff — nothing else, ever. Clean nights build a streak you'll protect.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Proof -->
+  <div style="width:100%;max-width:1160px;box-sizing:border-box;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:48px;align-items:center;padding:clamp(56px,10cqw,80px) clamp(20px,5cqw,32px)">
+    <div style="background:#1D1930;border:1px solid #2B2545;border-radius:22px;padding:24px 20px 16px">
+      <div style="padding:0 4px 14px;font-size:10.5px;letter-spacing:1.4px;font-weight:600;color:#8F8AA8">YOUR SLEEP VS CAFFEINE AT BEDTIME</div>
+      <svg viewBox="0 0 358 170" width="100%" style="display:block">
+        <line x1="34" x2="34" y1="8" y2="140" stroke="#2B2545" stroke-width="1"></line>
+        <line x1="34" x2="352" y1="140" y2="140" stroke="#2B2545" stroke-width="1"></line>
+        <text x="28" y="20" font-size="9" fill="#8F8AA8" text-anchor="end" font-family="-apple-system,sans-serif">9h</text>
+        <text x="28" y="78" font-size="9" fill="#8F8AA8" text-anchor="end" font-family="-apple-system,sans-serif">7h</text>
+        <text x="28" y="136" font-size="9" fill="#8F8AA8" text-anchor="end" font-family="-apple-system,sans-serif">5h</text>
+        <text x="60" y="156" font-size="9" fill="#8F8AA8" text-anchor="middle" font-family="-apple-system,sans-serif">0 mg</text>
+        <text x="193" y="156" font-size="9" fill="#8F8AA8" text-anchor="middle" font-family="-apple-system,sans-serif">75 mg</text>
+        <text x="330" y="156" font-size="9" fill="#8F8AA8" text-anchor="middle" font-family="-apple-system,sans-serif">150 mg</text>
+        <line x1="34" x2="352" y1="60" y2="118" stroke="#8F8AA8" stroke-width="1" stroke-dasharray="3 5" opacity="0.5"></line>
+        <circle cx="52" cy="30" r="4.5" fill="#7FE0B3" opacity="0.9"></circle>
+        <circle cx="70" cy="46" r="4.5" fill="#7FE0B3" opacity="0.9"></circle>
+        <circle cx="88" cy="38" r="4.5" fill="#7FE0B3" opacity="0.9"></circle>
+        <circle cx="106" cy="58" r="4.5" fill="#7FE0B3" opacity="0.9"></circle>
+        <circle cx="128" cy="52" r="4.5" fill="#7FE0B3" opacity="0.9"></circle>
+        <circle cx="150" cy="72" r="4.5" fill="#7FE0B3" opacity="0.85"></circle>
+        <circle cx="182" cy="66" r="4.5" fill="#F5A524" opacity="0.9"></circle>
+        <circle cx="214" cy="88" r="4.5" fill="#F5A524" opacity="0.9"></circle>
+        <circle cx="252" cy="98" r="4.5" fill="#F5A524" opacity="0.9"></circle>
+        <circle cx="286" cy="118" r="4.5" fill="#F5A524" opacity="0.9"></circle>
+        <circle cx="318" cy="112" r="4.5" fill="#F5A524" opacity="0.9"></circle>
+      </svg>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:18px">
+      <div style="font-size:11.5px;letter-spacing:1.8px;font-weight:700;color:#7FE0B3">WITH APPLE HEALTH</div>
+      <div style="font-family:'Nunito',ui-rounded,sans-serif;font-weight:800;font-size:clamp(26px,5.5cqw,34px);line-height:1.2;color:#F3E6CD;text-wrap:balance">Nights under 50 mg buy you <span style="color:#7FE0B3">42 more minutes</span> of sleep.</div>
+      <div style="font-size:15.5px;line-height:1.6;color:#8F8AA8;text-wrap:pretty">Connect Apple Health and Last Call plots your own sleep against caffeine at bedtime. Not a study — your data, on-device, making the case night after night.</div>
+      <div style="display:flex;gap:16px;padding-top:4px">
+        <div style="display:flex;align-items:center;gap:8px"><span style="width:8px;height:8px;border-radius:3px;background:rgba(127,224,179,0.75)"></span><span style="font-size:13px;color:#8F8AA8">Cleared by bedtime</span></div>
+        <div style="display:flex;align-items:center;gap:8px"><span style="width:8px;height:8px;border-radius:3px;background:rgba(245,165,36,0.78)"></span><span style="font-size:13px;color:#8F8AA8">Caffeine at bedtime</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pricing -->
+  
+  <div id="pricing" style="width:100%;background:#0E0C16;border-top:1px solid #2B2545;display:flex;justify-content:center">
+    <div style="width:100%;max-width:1160px;box-sizing:border-box;display:flex;flex-direction:column;gap:36px;padding:clamp(56px,10cqw,80px) clamp(20px,5cqw,32px);align-items:center">
+      <div style="display:flex;flex-direction:column;gap:12px;align-items:center;text-align:center">
+        <div style="font-size:11.5px;letter-spacing:1.8px;font-weight:700;color:#F5A524">PRICING</div>
+        <div style="font-family:'Nunito',ui-rounded,sans-serif;font-weight:800;font-size:clamp(26px,5.5cqw,34px);line-height:1.2;color:#F3E6CD">Free logs your cups. Pro shows your night.</div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px;width:100%;max-width:780px">
+        <div style="background:#1D1930;border:1px solid #2B2545;border-radius:22px;padding:30px 28px;display:flex;flex-direction:column;gap:18px">
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <span style="font-family:'Nunito',ui-rounded,sans-serif;font-weight:800;font-size:20px;color:#F3E6CD">Free</span>
+            <span style="font-family:'Nunito',ui-rounded,sans-serif;font-weight:800;font-size:34px;color:#F3E6CD">$0</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:11px">
+            <div style="display:flex;align-items:center;gap:10px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" style="flex:none"><path d="M4 12.5l5 5L20 6.5" stroke="#8F8AA8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span style="font-size:14px;color:#8F8AA8">Unlimited logging</span></div>
+            <div style="display:flex;align-items:center;gap:10px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" style="flex:none"><path d="M4 12.5l5 5L20 6.5" stroke="#8F8AA8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span style="font-size:14px;color:#8F8AA8">Today's curve + your Last Call time</span></div>
+            <div style="display:flex;align-items:center;gap:10px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" style="flex:none"><path d="M4 12.5l5 5L20 6.5" stroke="#8F8AA8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span style="font-size:14px;color:#8F8AA8">Last 7 days of history</span></div>
+          </div>
+        </div>
+        <div style="position:relative;background:#1D1930;border:1.5px solid #F5A524;border-radius:22px;padding:30px 28px;display:flex;flex-direction:column;gap:18px">
+          <span style="position:absolute;top:-11px;left:26px;font-size:10px;font-weight:700;letter-spacing:1px;color:#12101C;background:#F5A524;border-radius:7px;padding:4px 10px">7-DAY FREE TRIAL</span>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <span style="font-family:'Nunito',ui-rounded,sans-serif;font-weight:800;font-size:20px;color:#F3E6CD">Pro</span>
+            <span style="font-family:'Nunito',ui-rounded,sans-serif;font-weight:800;font-size:34px;color:#F3E6CD">$29.99<span style="font-size:14px;font-weight:600;color:#8F8AA8">/yr · or $4.99/mo</span></span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:11px">
+            <div style="display:flex;align-items:center;gap:10px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" style="flex:none"><path d="M4 12.5l5 5L20 6.5" stroke="#7FE0B3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span style="font-size:14px;color:#F3E6CD">Full history + streaks</span></div>
+            <div style="display:flex;align-items:center;gap:10px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" style="flex:none"><path d="M4 12.5l5 5L20 6.5" stroke="#7FE0B3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span style="font-size:14px;color:#F3E6CD">The 30-minute nudge</span><span style="font-size:9.5px;font-weight:700;letter-spacing:1px;color:#C79AD8;background:rgba(138,78,158,0.2);border:1px solid rgba(199,154,216,0.35);border-radius:6px;padding:3px 7px;flex:none">COMING SOON</span></div>
+            <div style="display:flex;align-items:center;gap:10px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" style="flex:none"><path d="M4 12.5l5 5L20 6.5" stroke="#7FE0B3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span style="font-size:14px;color:#F3E6CD">Lock screen + home widgets</span></div>
+            <div style="display:flex;align-items:center;gap:10px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" style="flex:none"><path d="M4 12.5l5 5L20 6.5" stroke="#7FE0B3" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span style="font-size:14px;color:#F3E6CD">Apple Health sleep + the report</span></div>
+          </div>
+          <a class="fx3" href="#app-store" data-store-link style="display:block;background:#F5A524;border-radius:14px;padding:14px;text-align:center;margin-top:auto;text-decoration:none"><span style="font-size:15px;font-weight:700;color:#12101C">Start free trial</span></a>
+        </div>
+      </div>
+      <span style="font-size:12.5px;color:#8F8AA8">Monthly or yearly · 7-day free trial on yearly · cancel anytime in Settings</span>
+    </div>
+  </div>
+  
+
+  <!-- Footer CTA -->
+  <div style="width:100%;max-width:1160px;box-sizing:border-box;display:flex;flex-direction:column;gap:22px;align-items:center;text-align:center;padding:clamp(64px,11cqw,90px) clamp(20px,5cqw,32px) 40px">
+    <img src="/assets/mascot/pose-bowl-safe.png" alt="Last Call cat asleep in a fishbowl" style="width:150px;height:auto;display:block;image-rendering:pixelated">
+    <div style="font-family:'Nunito',ui-rounded,sans-serif;font-weight:900;font-size:clamp(32px,7cqw,44px);line-height:1.15;color:#F3E6CD;max-width:560px;text-wrap:balance">Tonight starts this afternoon.</div>
+    <div style="font-size:16px;color:#8F8AA8">Know your last call before you order the next one.</div>
+    <a class="fx4" href="#app-store" data-store-link style="display:flex;align-items:center;gap:10px;background:#F5A524;border-radius:14px;padding:15px 26px;margin-top:8px;text-decoration:none">
+      <span style="font-size:16px;font-weight:700;color:#12101C">Download Last Call</span>
+    </a>
+  </div>
+  <div style="width:100%;max-width:1160px;box-sizing:border-box;display:flex;align-items:center;flex-wrap:wrap;gap:12px 24px;padding:26px clamp(20px,5cqw,32px) 34px;border-top:1px solid #2B2545">
+    <span style="font-size:12.5px;color:#8F8AA8">© 2026 Last Call</span>
+    <span style="font-size:12.5px;color:#8F8AA8;opacity:0.8">A tracking tool, not medical advice.</span>
+    <div style="margin-left:auto;display:flex;flex-wrap:wrap;gap:20px">
+      <a href="/redeem" style="font-size:12.5px;font-weight:600;color:#8F8AA8">Redeem a code</a>
+      <a href="/privacy" style="font-size:12.5px;font-weight:600;color:#8F8AA8">Privacy</a>
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" style="font-size:12.5px;font-weight:600;color:#8F8AA8">Terms</a>
+      <a href="mailto:warrennguyen.dev@gmail.com" data-support-link style="font-size:12.5px;font-weight:600;color:#8F8AA8">Support</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

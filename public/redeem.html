@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Redeem a code · Last Call</title>
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#12101C;font-family:-apple-system,'SF Pro Text',system-ui,sans-serif}
+a{color:#F5A524;text-decoration:none}a:hover{color:#FFC85C;text-decoration:underline}
+input::placeholder{color:#4A4368;letter-spacing:2.5px}
+[hidden]{display:none !important}
+.btn-primary:hover{background:#FFC85C !important}
+.btn-primary:active{transform:scale(0.98)}
+#submit:disabled{background:#221D38 !important;color:#4A4368;cursor:default;transform:none}
+.btn-outline:hover{background:#221D38 !important}
+.mascot{height:auto;display:block;image-rendering:pixelated}
+</style>
+<script src="/js/config.js" defer></script>
+<script src="/js/site.js" defer></script>
+<script src="/js/redeem.js" defer></script>
+</head>
+<body>
+<div style="min-height:100vh;background:#12101C;color:#F3E6CD;display:flex;flex-direction:column;align-items:center;container-type:inline-size">
+  <div style="width:100%;max-width:1160px;box-sizing:border-box;display:flex;align-items:center;gap:20px;padding:22px clamp(20px,5cqw,32px)">
+    <a href="/" style="display:flex;align-items:center;gap:11px;text-decoration:none">
+      <div style="width:34px;height:34px;border-radius:10px;background:#F5A524;display:flex;align-items:center;justify-content:center">
+        <svg width="20" height="20" viewBox="0 0 32 32" fill="none"><path d="M4 24 C4 12 12 6 15 5" stroke="#12101C" stroke-width="2.8" stroke-linecap="round"></path><line x1="4" x2="28" y1="20" y2="20" stroke="#12101C" stroke-width="1.7" stroke-dasharray="2.5 3"></line><circle cx="15" cy="5" r="3" fill="#12101C"></circle><circle cx="22" cy="20" r="3" fill="#12101C"></circle></svg>
+      </div>
+      <span style="font-family:'Nunito',ui-rounded,sans-serif;font-weight:800;font-size:19px;color:#F3E6CD">Last Call</span>
+    </a>
+  </div>
+
+  <!-- data-when lists the states an element shows in; redeem.js toggles `hidden`. -->
+  <main id="redeem" style="width:100%;max-width:460px;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;gap:24px;padding:clamp(24px,7cqw,64px) clamp(20px,5cqw,32px) 80px">
+    <!-- All mascots load up front so switching state never shows a blank gap. -->
+    <img class="mascot" data-when="input checking" src="/assets/mascot/pose-idle.png" alt="" style="width:108px">
+    <img class="mascot" data-when="applied" src="/assets/mascot/pose-bling.png" alt="" style="width:110px" hidden>
+    <img class="mascot" data-when="notfound" src="/assets/mascot/pose-ouch.png" alt="" style="width:86px" hidden>
+    <img class="mascot" data-when="error" src="/assets/mascot/pose-fix.png" alt="" style="width:120px" hidden>
+    <img class="mascot" data-when="used expired" src="/assets/mascot/pose-idle.png" alt="" style="width:96px" hidden>
+
+    <div data-when="input checking" style="display:flex;flex-direction:column;gap:8px;align-items:center;text-align:center">
+      <h1 style="margin:0;font-family:'Nunito',ui-rounded,sans-serif;font-weight:900;font-size:clamp(28px,7cqw,36px);line-height:1.15;color:#F3E6CD">Redeem a code</h1>
+      <div style="font-size:15px;line-height:1.55;color:#8F8AA8;text-wrap:pretty">From a gift card, a sleep clinic, or a friend who already pays for this.</div>
+    </div>
+
+    <!-- Form: input, checking, not found, error -->
+    <form id="form" data-when="input checking notfound error" novalidate style="width:100%;margin:0;background:#1D1930;border:1px solid #2B2545;border-radius:22px;padding:22px;box-sizing:border-box;display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;flex-direction:column;gap:7px">
+        <label for="lc-code" style="font-size:10.5px;letter-spacing:1.4px;font-weight:600;color:#8F8AA8">YOUR CODE</label>
+        <div id="field" style="background:#12101C;border:1.5px solid #2B2545;border-radius:14px;padding:0 16px;display:flex;align-items:center;gap:10px">
+          <input id="lc-code" name="code" placeholder="SLEEP90" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="24" style="flex:1;min-width:0;background:transparent;border:0;outline:none;padding:15px 0;font-family:ui-monospace,Menlo,monospace;font-size:18px;letter-spacing:2.5px;color:#F3E6CD;text-transform:uppercase">
+          <span data-when="checking" style="font-size:12px;font-weight:600;color:#8F8AA8;flex:none" hidden>Checking…</span>
+        </div>
+        <span data-when="input checking" style="font-size:12px;color:#8F8AA8;padding-left:2px">Letters and numbers only. Case doesn't matter.</span>
+      </div>
+
+      <div data-when="notfound" role="alert" style="display:flex;gap:9px;align-items:flex-start" hidden>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" style="flex:none;margin-top:2px"><circle cx="12" cy="12" r="9" stroke="#E8705A" stroke-width="2"></circle><path d="M12 7.5v5.5M12 16.2v.6" stroke="#E8705A" stroke-width="2" stroke-linecap="round"></path></svg>
+        <span style="font-size:13.5px;line-height:1.5;color:#E8705A;flex:1">We don't have that code. Check for a 0 where you typed an O, then try again.</span>
+      </div>
+      <div data-when="error" role="alert" style="display:flex;gap:9px;align-items:flex-start" hidden>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" style="flex:none;margin-top:2px"><path d="M12 3.5l9 16H3l9-16z" stroke="#F5A524" stroke-width="2" stroke-linejoin="round"></path><path d="M12 10v4M12 17v.5" stroke="#F5A524" stroke-width="2" stroke-linecap="round"></path></svg>
+        <span style="font-size:13.5px;line-height:1.5;color:#F3E6CD;flex:1">We couldn't check your code just now. Your connection may have dropped. Your code is still here.</span>
+      </div>
+
+      <button id="submit" type="submit" class="btn-primary" style="border:0;cursor:pointer;background:#F5A524;border-radius:16px;padding:15px;font-family:inherit;font-size:15.5px;font-weight:700;color:#12101C">Redeem</button>
+    </form>
+
+    <!-- Applied -->
+    <div data-when="applied" style="width:100%;background:#1D1930;border:1px solid #2B2545;border-radius:22px;padding:26px 22px 22px;box-sizing:border-box;display:flex;flex-direction:column;gap:16px;align-items:center;text-align:center" hidden>
+      <span style="width:44px;height:44px;border-radius:99px;background:rgba(127,224,179,0.16);display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="#7FE0B3" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></span>
+      <div style="display:flex;flex-direction:column;gap:7px">
+        <span style="font-family:'Nunito',ui-rounded,sans-serif;font-weight:800;font-size:22px;color:#F3E6CD"><span data-code></span> is good for <span data-days></span> days of Pro</span>
+        <span style="font-size:14px;line-height:1.55;color:#8F8AA8;text-wrap:pretty">Open it on your iPhone to add it to your account. Nothing renews after <span data-days></span> days unless you subscribe yourself.</span>
+      </div>
+      <a data-app-link href="#" class="btn-primary" style="display:block;width:100%;box-sizing:border-box;background:#F5A524;border-radius:16px;padding:15px;text-decoration:none"><span style="font-size:15.5px;font-weight:700;color:#12101C">Open in Last Call</span></a>
+      <span style="font-size:12.5px;color:#8F8AA8">No app yet? <a data-store-link href="#app-store" style="color:#F5A524;font-weight:600">Download it</a>, then tap the button again.</span>
+    </div>
+
+    <!-- Already used -->
+    <div data-when="used" style="width:100%;background:#1D1930;border:1px solid #2B2545;border-radius:22px;padding:22px;box-sizing:border-box;display:flex;flex-direction:column;gap:16px" hidden>
+      <div style="display:flex;gap:12px;align-items:flex-start">
+        <span style="width:36px;height:36px;border-radius:99px;background:rgba(138,78,158,0.22);display:flex;align-items:center;justify-content:center;flex:none"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M12 7.5v5l3.5 2" stroke="#C79AD8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="12" cy="12" r="8.5" stroke="#C79AD8" stroke-width="2"></circle></svg></span>
+        <div style="display:flex;flex-direction:column;gap:4px;flex:1">
+          <span style="font-family:'Nunito',ui-rounded,sans-serif;font-weight:800;font-size:18px;color:#F3E6CD">This code was already redeemed</span>
+          <span style="font-size:14px;line-height:1.5;color:#8F8AA8"><span data-code></span> was used on <span data-used-at></span>. Each code works once. If it was you, restore purchases in the app.</span>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <a data-app-link href="#" class="btn-outline" style="display:block;border:1px solid #2B2545;border-radius:16px;padding:15px;text-align:center;text-decoration:none"><span style="font-size:15.5px;font-weight:700;color:#F3E6CD">Open Last Call to restore</span></a>
+        <button type="button" data-reset style="border:0;background:transparent;cursor:pointer;padding:8px;font-family:inherit;font-size:14px;font-weight:600;color:#8F8AA8">Try a different code</button>
+      </div>
+    </div>
+
+    <!-- Expired -->
+    <div data-when="expired" style="width:100%;background:#1D1930;border:1px solid #2B2545;border-radius:22px;padding:22px;box-sizing:border-box;display:flex;flex-direction:column;gap:16px" hidden>
+      <div style="display:flex;gap:12px;align-items:flex-start">
+        <span style="width:36px;height:36px;border-radius:99px;background:rgba(232,112,90,0.16);display:flex;align-items:center;justify-content:center;flex:none"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><rect x="4" y="5.5" width="16" height="14" rx="2.5" stroke="#E8705A" stroke-width="1.9"></rect><path d="M4 10h16M8.5 3.5v3.5M15.5 3.5v3.5M10 13.5l4 4M14 13.5l-4 4" stroke="#E8705A" stroke-width="1.9" stroke-linecap="round"></path></svg></span>
+        <div style="display:flex;flex-direction:column;gap:4px;flex:1">
+          <span style="font-family:'Nunito',ui-rounded,sans-serif;font-weight:800;font-size:18px;color:#F3E6CD">That offer closed on <span data-closed-at></span></span>
+          <span style="font-size:14px;line-height:1.5;color:#8F8AA8"><span data-code></span> is no longer valid. Pro is $29.99 a year or $4.99 a month, with a 7-day trial on yearly.</span>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <a data-store-link href="#app-store" class="btn-primary" style="display:block;background:#F5A524;border-radius:16px;padding:15px;text-align:center;text-decoration:none"><span style="font-size:15.5px;font-weight:700;color:#12101C">Start the free trial</span></a>
+        <button type="button" data-reset style="border:0;background:transparent;cursor:pointer;padding:8px;font-family:inherit;font-size:14px;font-weight:600;color:#8F8AA8">Try a different code</button>
+      </div>
+    </div>
+
+    <span style="font-size:12.5px;line-height:1.5;color:#8F8AA8;text-align:center">Questions about a code? <a data-support-link href="mailto:warrennguyen.dev@gmail.com" style="color:#F5A524;font-weight:600">Email support</a></span>
+  </main>
+</div>
+</body>
+</html>
